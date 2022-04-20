@@ -1,0 +1,87 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=Models/mobilenetv2_qat.onnx --int8
+[04/19/2022-22:08:27] [I] === Model Options ===
+[04/19/2022-22:08:27] [I] Format: ONNX
+[04/19/2022-22:08:27] [I] Model: Models/mobilenetv2_qat.onnx
+[04/19/2022-22:08:27] [I] Output:
+[04/19/2022-22:08:27] [I] === Build Options ===
+[04/19/2022-22:08:27] [I] Max batch: explicit batch
+[04/19/2022-22:08:27] [I] Workspace: 16 MiB
+[04/19/2022-22:08:27] [I] minTiming: 1
+[04/19/2022-22:08:27] [I] avgTiming: 8
+[04/19/2022-22:08:27] [I] Precision: FP32+INT8
+[04/19/2022-22:08:27] [I] Calibration: Dynamic
+[04/19/2022-22:08:27] [I] Refit: Disabled
+[04/19/2022-22:08:27] [I] Sparsity: Disabled
+[04/19/2022-22:08:27] [I] Safe mode: Disabled
+[04/19/2022-22:08:27] [I] DirectIO mode: Disabled
+[04/19/2022-22:08:27] [I] Restricted mode: Disabled
+[04/19/2022-22:08:27] [I] Save engine: 
+[04/19/2022-22:08:27] [I] Load engine: 
+[04/19/2022-22:08:27] [I] Profiling verbosity: 0
+[04/19/2022-22:08:27] [I] Tactic sources: Using default tactic sources
+[04/19/2022-22:08:27] [I] timingCacheMode: local
+[04/19/2022-22:08:27] [I] timingCacheFile: 
+[04/19/2022-22:08:27] [I] Input(s)s format: fp32:CHW
+[04/19/2022-22:08:27] [I] Output(s)s format: fp32:CHW
+[04/19/2022-22:08:27] [I] Input build shapes: model
+[04/19/2022-22:08:27] [I] Input calibration shapes: model
+[04/19/2022-22:08:27] [I] === System Options ===
+[04/19/2022-22:08:27] [I] Device: 0
+[04/19/2022-22:08:27] [I] DLACore: 
+[04/19/2022-22:08:27] [I] Plugins:
+[04/19/2022-22:08:27] [I] === Inference Options ===
+[04/19/2022-22:08:27] [I] Batch: Explicit
+[04/19/2022-22:08:27] [I] Input inference shapes: model
+[04/19/2022-22:08:27] [I] Iterations: 10
+[04/19/2022-22:08:27] [I] Duration: 3s (+ 200ms warm up)
+[04/19/2022-22:08:27] [I] Sleep time: 0ms
+[04/19/2022-22:08:27] [I] Idle time: 0ms
+[04/19/2022-22:08:27] [I] Streams: 1
+[04/19/2022-22:08:27] [I] ExposeDMA: Disabled
+[04/19/2022-22:08:27] [I] Data transfers: Enabled
+[04/19/2022-22:08:27] [I] Spin-wait: Disabled
+[04/19/2022-22:08:27] [I] Multithreading: Disabled
+[04/19/2022-22:08:27] [I] CUDA Graph: Disabled
+[04/19/2022-22:08:27] [I] Separate profiling: Disabled
+[04/19/2022-22:08:27] [I] Time Deserialize: Disabled
+[04/19/2022-22:08:27] [I] Time Refit: Disabled
+[04/19/2022-22:08:27] [I] Skip inference: Disabled
+[04/19/2022-22:08:27] [I] Inputs:
+[04/19/2022-22:08:27] [I] === Reporting Options ===
+[04/19/2022-22:08:27] [I] Verbose: Disabled
+[04/19/2022-22:08:27] [I] Averages: 10 inferences
+[04/19/2022-22:08:27] [I] Percentile: 99
+[04/19/2022-22:08:27] [I] Dump refittable layers:Disabled
+[04/19/2022-22:08:27] [I] Dump output: Disabled
+[04/19/2022-22:08:27] [I] Profile: Disabled
+[04/19/2022-22:08:27] [I] Export timing to JSON file: 
+[04/19/2022-22:08:27] [I] Export output to JSON file: 
+[04/19/2022-22:08:27] [I] Export profile to JSON file: 
+[04/19/2022-22:08:27] [I] 
+[04/19/2022-22:08:27] [I] === Device Information ===
+[04/19/2022-22:08:27] [I] Selected Device: NVIDIA Tegra X1
+[04/19/2022-22:08:27] [I] Compute Capability: 5.3
+[04/19/2022-22:08:27] [I] SMs: 1
+[04/19/2022-22:08:27] [I] Compute Clock Rate: 0.9216 GHz
+[04/19/2022-22:08:27] [I] Device Global Memory: 3964 MiB
+[04/19/2022-22:08:27] [I] Shared Memory per SM: 64 KiB
+[04/19/2022-22:08:27] [I] Memory Bus Width: 64 bits (ECC disabled)
+[04/19/2022-22:08:27] [I] Memory Clock Rate: 0.01275 GHz
+[04/19/2022-22:08:27] [I] 
+[04/19/2022-22:08:27] [I] TensorRT version: 8.2.1
+[04/19/2022-22:08:29] [I] [TRT] [MemUsageChange] Init CUDA: CPU +229, GPU +0, now: CPU 248, GPU 2740 (MiB)
+[04/19/2022-22:08:29] [I] [TRT] [MemUsageSnapshot] Begin constructing builder kernel library: CPU 248 MiB, GPU 2740 MiB
+[04/19/2022-22:08:29] [I] [TRT] [MemUsageSnapshot] End constructing builder kernel library: CPU 277 MiB, GPU 2770 MiB
+[04/19/2022-22:08:29] [I] Start parsing network model
+[04/19/2022-22:08:29] [I] [TRT] ----------------------------------------------------------------
+[04/19/2022-22:08:29] [I] [TRT] Input filename:   Models/mobilenetv2_qat.onnx
+[04/19/2022-22:08:29] [I] [TRT] ONNX IR version:  0.0.7
+[04/19/2022-22:08:29] [I] [TRT] Opset version:    13
+[04/19/2022-22:08:29] [I] [TRT] Producer name:    tf2onnx
+[04/19/2022-22:08:29] [I] [TRT] Producer version: 1.9.3
+[04/19/2022-22:08:29] [I] [TRT] Domain:           
+[04/19/2022-22:08:29] [I] [TRT] Model version:    0
+[04/19/2022-22:08:29] [I] [TRT] Doc string:       
+[04/19/2022-22:08:29] [I] [TRT] ----------------------------------------------------------------
+[04/19/2022-22:08:29] [I] Finish parsing network model
+&&&& FAILED TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=Models/mobilenetv2_qat.onnx --int8

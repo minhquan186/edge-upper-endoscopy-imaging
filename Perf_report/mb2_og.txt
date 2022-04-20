@@ -1,0 +1,235 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=Models/mobilenetv2_og.onnx
+[04/19/2022-21:46:52] [I] === Model Options ===
+[04/19/2022-21:46:52] [I] Format: ONNX
+[04/19/2022-21:46:52] [I] Model: Models/mobilenetv2_og.onnx
+[04/19/2022-21:46:52] [I] Output:
+[04/19/2022-21:46:52] [I] === Build Options ===
+[04/19/2022-21:46:52] [I] Max batch: explicit batch
+[04/19/2022-21:46:52] [I] Workspace: 16 MiB
+[04/19/2022-21:46:52] [I] minTiming: 1
+[04/19/2022-21:46:52] [I] avgTiming: 8
+[04/19/2022-21:46:52] [I] Precision: FP32
+[04/19/2022-21:46:52] [I] Calibration: 
+[04/19/2022-21:46:52] [I] Refit: Disabled
+[04/19/2022-21:46:52] [I] Sparsity: Disabled
+[04/19/2022-21:46:52] [I] Safe mode: Disabled
+[04/19/2022-21:46:52] [I] DirectIO mode: Disabled
+[04/19/2022-21:46:52] [I] Restricted mode: Disabled
+[04/19/2022-21:46:52] [I] Save engine: 
+[04/19/2022-21:46:52] [I] Load engine: 
+[04/19/2022-21:46:52] [I] Profiling verbosity: 0
+[04/19/2022-21:46:52] [I] Tactic sources: Using default tactic sources
+[04/19/2022-21:46:52] [I] timingCacheMode: local
+[04/19/2022-21:46:52] [I] timingCacheFile: 
+[04/19/2022-21:46:52] [I] Input(s)s format: fp32:CHW
+[04/19/2022-21:46:52] [I] Output(s)s format: fp32:CHW
+[04/19/2022-21:46:52] [I] Input build shapes: model
+[04/19/2022-21:46:52] [I] Input calibration shapes: model
+[04/19/2022-21:46:52] [I] === System Options ===
+[04/19/2022-21:46:52] [I] Device: 0
+[04/19/2022-21:46:52] [I] DLACore: 
+[04/19/2022-21:46:52] [I] Plugins:
+[04/19/2022-21:46:52] [I] === Inference Options ===
+[04/19/2022-21:46:52] [I] Batch: Explicit
+[04/19/2022-21:46:52] [I] Input inference shapes: model
+[04/19/2022-21:46:52] [I] Iterations: 10
+[04/19/2022-21:46:52] [I] Duration: 3s (+ 200ms warm up)
+[04/19/2022-21:46:52] [I] Sleep time: 0ms
+[04/19/2022-21:46:52] [I] Idle time: 0ms
+[04/19/2022-21:46:52] [I] Streams: 1
+[04/19/2022-21:46:52] [I] ExposeDMA: Disabled
+[04/19/2022-21:46:52] [I] Data transfers: Enabled
+[04/19/2022-21:46:52] [I] Spin-wait: Disabled
+[04/19/2022-21:46:52] [I] Multithreading: Disabled
+[04/19/2022-21:46:52] [I] CUDA Graph: Disabled
+[04/19/2022-21:46:52] [I] Separate profiling: Disabled
+[04/19/2022-21:46:52] [I] Time Deserialize: Disabled
+[04/19/2022-21:46:52] [I] Time Refit: Disabled
+[04/19/2022-21:46:52] [I] Skip inference: Disabled
+[04/19/2022-21:46:52] [I] Inputs:
+[04/19/2022-21:46:52] [I] === Reporting Options ===
+[04/19/2022-21:46:52] [I] Verbose: Disabled
+[04/19/2022-21:46:52] [I] Averages: 10 inferences
+[04/19/2022-21:46:52] [I] Percentile: 99
+[04/19/2022-21:46:52] [I] Dump refittable layers:Disabled
+[04/19/2022-21:46:52] [I] Dump output: Disabled
+[04/19/2022-21:46:52] [I] Profile: Disabled
+[04/19/2022-21:46:52] [I] Export timing to JSON file: 
+[04/19/2022-21:46:52] [I] Export output to JSON file: 
+[04/19/2022-21:46:52] [I] Export profile to JSON file: 
+[04/19/2022-21:46:52] [I] 
+[04/19/2022-21:46:52] [I] === Device Information ===
+[04/19/2022-21:46:52] [I] Selected Device: NVIDIA Tegra X1
+[04/19/2022-21:46:52] [I] Compute Capability: 5.3
+[04/19/2022-21:46:52] [I] SMs: 1
+[04/19/2022-21:46:52] [I] Compute Clock Rate: 0.9216 GHz
+[04/19/2022-21:46:52] [I] Device Global Memory: 3964 MiB
+[04/19/2022-21:46:52] [I] Shared Memory per SM: 64 KiB
+[04/19/2022-21:46:52] [I] Memory Bus Width: 64 bits (ECC disabled)
+[04/19/2022-21:46:52] [I] Memory Clock Rate: 0.01275 GHz
+[04/19/2022-21:46:52] [I] 
+[04/19/2022-21:46:52] [I] TensorRT version: 8.2.1
+[04/19/2022-21:46:54] [I] [TRT] [MemUsageChange] Init CUDA: CPU +229, GPU +0, now: CPU 248, GPU 2734 (MiB)
+[04/19/2022-21:46:54] [I] [TRT] [MemUsageSnapshot] Begin constructing builder kernel library: CPU 248 MiB, GPU 2734 MiB
+[04/19/2022-21:46:54] [I] [TRT] [MemUsageSnapshot] End constructing builder kernel library: CPU 278 MiB, GPU 2764 MiB
+[04/19/2022-21:46:55] [I] Start parsing network model
+[04/19/2022-21:46:55] [I] [TRT] ----------------------------------------------------------------
+[04/19/2022-21:46:55] [I] [TRT] Input filename:   Models/mobilenetv2_og.onnx
+[04/19/2022-21:46:55] [I] [TRT] ONNX IR version:  0.0.4
+[04/19/2022-21:46:55] [I] [TRT] Opset version:    9
+[04/19/2022-21:46:55] [I] [TRT] Producer name:    tf2onnx
+[04/19/2022-21:46:55] [I] [TRT] Producer version: 1.9.3
+[04/19/2022-21:46:55] [I] [TRT] Domain:           
+[04/19/2022-21:46:55] [I] [TRT] Model version:    0
+[04/19/2022-21:46:55] [I] [TRT] Doc string:       
+[04/19/2022-21:46:55] [I] [TRT] ----------------------------------------------------------------
+[04/19/2022-21:46:55] [I] Finish parsing network model
+[04/19/2022-21:46:55] [I] [TRT] ---------- Layers Running on DLA ----------
+[04/19/2022-21:46:55] [I] [TRT] ---------- Layers Running on GPU ----------
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/Conv1/Conv2D__6
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/Conv1/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/Conv1_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/expanded_conv_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/expanded_conv_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/expanded_conv_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_pad/Pad + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_1_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_2_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_pad/Pad + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_3_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_4_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_5_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_pad/Pad + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_6_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_7_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_8_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_9_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_10_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_10_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_10_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_10_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_10_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_11_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_12_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_pad/Pad + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_13_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_expand/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_expand_BN/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_14_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_project/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_15_add/add
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_16_expand/Conv2D + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_16_expand_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_16_depthwise/depthwise + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_16_depthwise_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/block_16_project/Conv2D
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/Conv_1/Conv2D + StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/Conv_1_bn/FusedBatchNormV3 + PWN(StatefulPartitionedCall/sequential/mobilenetv2_1.00_128/out_relu/Relu6)
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/global_average_pooling2d/Mean
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/dense/MatMul + StatefulPartitionedCall/sequential/dense/BiasAdd/ReadVariableOp:0 + (Unnamed Layer* 143) [Shuffle] + unsqueeze_node_after_StatefulPartitionedCall/sequential/dense/BiasAdd/ReadVariableOp:0 + (Unnamed Layer* 143) [Shuffle]_(Unnamed Layer* 143) [Shuffle]_output + StatefulPartitionedCall/sequential/dense/BiasAdd
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] copied_squeeze_after_StatefulPartitionedCall/sequential/dense/BiasAdd
+[04/19/2022-21:46:55] [I] [TRT] [GpuLayer] StatefulPartitionedCall/sequential/dense/Softmax
+[04/19/2022-21:46:56] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +158, GPU +156, now: CPU 448, GPU 2939 (MiB)
+[04/19/2022-21:46:58] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +240, GPU +237, now: CPU 688, GPU 3176 (MiB)
+[04/19/2022-21:46:58] [I] [TRT] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[04/19/2022-21:47:10] [I] [TRT] Some tactics do not have sufficient workspace memory to run. Increasing workspace size may increase performance, please check verbose output.
+[04/19/2022-21:49:11] [I] [TRT] Detected 1 inputs and 1 output network tensors.
+[04/19/2022-21:49:11] [I] [TRT] Total Host Persistent Memory: 93232
+[04/19/2022-21:49:11] [I] [TRT] Total Device Persistent Memory: 2137088
+[04/19/2022-21:49:11] [I] [TRT] Total Scratch Memory: 5120
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 10 MiB, GPU 31 MiB
+[04/19/2022-21:49:11] [I] [TRT] [BlockAssignment] Algorithm ShiftNTopDown took 7.00394ms to assign 4 blocks to 59 nodes requiring 2293760 bytes.
+[04/19/2022-21:49:11] [I] [TRT] Total Activation Memory: 2293760
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 932, GPU 3449 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 932, GPU 3449 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +2, GPU +16, now: CPU 2, GPU 16 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init CUDA: CPU +0, GPU +0, now: CPU 937, GPU 3458 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] Loaded engine size: 8 MiB
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 938, GPU 3458 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 938, GPU 3458 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +8, now: CPU 0, GPU 8 (MiB)
+[04/19/2022-21:49:11] [I] Engine built in 139.259 sec.
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 899, GPU 3458 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 899, GPU 3458 (MiB)
+[04/19/2022-21:49:11] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +4, now: CPU 0, GPU 12 (MiB)
+[04/19/2022-21:49:11] [I] Using random values for input mobilenetv2_1.00_128_input
+[04/19/2022-21:49:11] [I] Created input binding for mobilenetv2_1.00_128_input with dimensions 1x128x128x3
+[04/19/2022-21:49:11] [I] Using random values for output dense
+[04/19/2022-21:49:11] [I] Created output binding for dense with dimensions 1x10
+[04/19/2022-21:49:11] [I] Starting inference
+[04/19/2022-21:49:14] [I] Warmup completed 9 queries over 200 ms
+[04/19/2022-21:49:14] [I] Timing trace has 439 queries over 3.01658 s
+[04/19/2022-21:49:14] [I] 
+[04/19/2022-21:49:14] [I] === Trace details ===
+[04/19/2022-21:49:14] [I] Trace averages of 10 runs:
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 7.54507 ms - Host latency: 7.56764 ms (end to end 7.57755 ms, enqueue 5.14798 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81808 ms - Host latency: 6.83883 ms (end to end 6.84739 ms, enqueue 4.65202 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81278 ms - Host latency: 6.83344 ms (end to end 6.84333 ms, enqueue 4.70198 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.80444 ms - Host latency: 6.82516 ms (end to end 6.83435 ms, enqueue 4.68197 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82303 ms - Host latency: 6.84373 ms (end to end 6.85264 ms, enqueue 4.211 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81511 ms - Host latency: 6.836 ms (end to end 6.84551 ms, enqueue 4.03682 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82741 ms - Host latency: 6.84805 ms (end to end 6.8576 ms, enqueue 4.37787 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81516 ms - Host latency: 6.83591 ms (end to end 6.84496 ms, enqueue 4.25146 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81863 ms - Host latency: 6.83936 ms (end to end 6.84868 ms, enqueue 4.42773 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81263 ms - Host latency: 6.83325 ms (end to end 6.84233 ms, enqueue 4.55743 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.83287 ms - Host latency: 6.85378 ms (end to end 6.86317 ms, enqueue 3.94895 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82174 ms - Host latency: 6.84244 ms (end to end 6.85212 ms, enqueue 4.13989 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81948 ms - Host latency: 6.84012 ms (end to end 6.84933 ms, enqueue 4.38243 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82231 ms - Host latency: 6.84303 ms (end to end 6.85232 ms, enqueue 4.43323 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82452 ms - Host latency: 6.8453 ms (end to end 6.85442 ms, enqueue 3.95909 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.8298 ms - Host latency: 6.85049 ms (end to end 6.85903 ms, enqueue 4.44242 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.83276 ms - Host latency: 6.8533 ms (end to end 6.86215 ms, enqueue 4.22224 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82734 ms - Host latency: 6.8483 ms (end to end 6.85768 ms, enqueue 4.23099 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81209 ms - Host latency: 6.83273 ms (end to end 6.84208 ms, enqueue 4.30435 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82522 ms - Host latency: 6.846 ms (end to end 6.855 ms, enqueue 4.42783 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82804 ms - Host latency: 6.84878 ms (end to end 6.85721 ms, enqueue 3.97523 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81506 ms - Host latency: 6.83557 ms (end to end 6.84492 ms, enqueue 4.62524 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82085 ms - Host latency: 6.84165 ms (end to end 6.85137 ms, enqueue 4.67174 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.83447 ms - Host latency: 6.85518 ms (end to end 6.86375 ms, enqueue 4.01096 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81632 ms - Host latency: 6.83673 ms (end to end 6.84614 ms, enqueue 4.68481 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82188 ms - Host latency: 6.84268 ms (end to end 6.85215 ms, enqueue 4.5793 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.834 ms - Host latency: 6.85468 ms (end to end 6.86399 ms, enqueue 3.9588 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82048 ms - Host latency: 6.84131 ms (end to end 6.85073 ms, enqueue 4.28669 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82788 ms - Host latency: 6.84871 ms (end to end 6.85769 ms, enqueue 4.21089 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.84478 ms - Host latency: 6.86548 ms (end to end 6.87405 ms, enqueue 3.7292 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82241 ms - Host latency: 6.84312 ms (end to end 6.85291 ms, enqueue 4.2592 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82898 ms - Host latency: 6.84978 ms (end to end 6.85906 ms, enqueue 4.21187 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82412 ms - Host latency: 6.84485 ms (end to end 6.85359 ms, enqueue 4.38381 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82258 ms - Host latency: 6.84321 ms (end to end 6.85251 ms, enqueue 4.19983 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.8271 ms - Host latency: 6.84761 ms (end to end 6.85593 ms, enqueue 4.10884 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82991 ms - Host latency: 6.85054 ms (end to end 6.8595 ms, enqueue 3.85427 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.82683 ms - Host latency: 6.84773 ms (end to end 6.85781 ms, enqueue 4.04375 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.83035 ms - Host latency: 6.85098 ms (end to end 6.86006 ms, enqueue 4.1877 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.83872 ms - Host latency: 6.85962 ms (end to end 6.8688 ms, enqueue 3.96042 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81929 ms - Host latency: 6.83987 ms (end to end 6.84888 ms, enqueue 4.57722 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.81216 ms - Host latency: 6.83279 ms (end to end 6.84243 ms, enqueue 4.71641 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.84111 ms - Host latency: 6.8616 ms (end to end 6.87085 ms, enqueue 4.00579 ms)
+[04/19/2022-21:49:14] [I] Average on 10 runs - GPU latency: 6.8376 ms - Host latency: 6.85847 ms (end to end 6.86748 ms, enqueue 4.10618 ms)
+[04/19/2022-21:49:14] [I] 
+[04/19/2022-21:49:14] [I] === Performance summary ===
+[04/19/2022-21:49:14] [I] Throughput: 145.529 qps
+[04/19/2022-21:49:14] [I] Latency: min = 6.77234 ms, max = 7.97771 ms, mean = 6.86171 ms, median = 6.84729 ms, percentile(99%) = 7.94447 ms
+[04/19/2022-21:49:14] [I] End-to-End Host Latency: min = 6.78116 ms, max = 7.98698 ms, mean = 6.8709 ms, median = 6.85675 ms, percentile(99%) = 7.95438 ms
+[04/19/2022-21:49:14] [I] Enqueue Time: min = 2.73297 ms, max = 12.5784 ms, mean = 4.29206 ms, median = 4.23364 ms, percentile(99%) = 6.21509 ms
+[04/19/2022-21:49:14] [I] H2D Latency: min = 0.0170288 ms, max = 0.0208282 ms, mean = 0.0177102 ms, median = 0.0175781 ms, percentile(99%) = 0.0197906 ms
+[04/19/2022-21:49:14] [I] GPU Compute Time: min = 6.75177 ms, max = 7.95416 ms, mean = 6.84096 ms, median = 6.82666 ms, percentile(99%) = 7.92151 ms
+[04/19/2022-21:49:14] [I] D2H Latency: min = 0.00170898 ms, max = 0.00366211 ms, mean = 0.0030407 ms, median = 0.00305176 ms, percentile(99%) = 0.00360107 ms
+[04/19/2022-21:49:14] [I] Total Host Walltime: 3.01658 s
+[04/19/2022-21:49:14] [I] Total GPU Compute Time: 3.00318 s
+[04/19/2022-21:49:14] [I] Explanations of the performance metrics are printed in the verbose logs.
+[04/19/2022-21:49:14] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=Models/mobilenetv2_og.onnx
