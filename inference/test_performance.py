@@ -10,10 +10,6 @@ import tensorflow as tf
 import time
 import argparse
 
-# Parser
-parser = argparse.ArgumentParser()
-parser.add_argument('--model', type=str, help='tflite model\'s path')
-args = parser.parse_args()
 # Setup
 folder_path="/home/mica/edge-upper-endoscopy-imaging/data_NICS"
 class_names = [ '1 Hầu họng', '2 Thực quản', '3 Tâm vị', '4 Thân vị', '5 Phình vị', '6 Hang vị','7 Bờ cong lớn','8 Bờ cong nhỏ','9 Hành tá tràng','10 Tá tràng']
@@ -81,26 +77,6 @@ def load_augmented_image(datasets, IMAGE_SIZE=Test_SIZE):
     labels = np.array(labels, dtype = 'int32')
     return images, labels
 
-# Load data for train/test
-# NICS_images, NICS_labels = loadimage('train')
-test_images, test_labels = loadimage('test')
-
-print(len(test_images))
-
-# Re-load data from pkl
-# train_images = _load_pkl('/content/drive/MyDrive/MICA/BACaff_images')
-# train_labels = _load_pkl('/content/drive/MyDrive/MICA/BACaff_labels')
-
-# Check number of data
-# print("Training images: {}".format(train_images.shape))
-# print("Training labels: {}".format(train_labels.shape))
-# print("Validation images: {}".format(val_images.shape))
-# print("Validation labels: {}".format(val_labels.shape))
-print("Test images: {}".format(test_images.shape))
-print("Test labels: {}".format(test_labels.shape))
-
-
-
 # A helper function to evaluate the TF Lite model using "test" dataset.
 def evaluate_model(interpreter):
   input_index = interpreter.get_input_details()[0]["index"]
@@ -142,15 +118,46 @@ def evaluate_model(interpreter):
 
   return accuracy
 
-# Path to models
-tflite_model_file = args.model
+if __name__ == 'main':
+  # Parser
+  parser = argparse.ArgumentParser()
+  feat = parser.add_mutually_exclusive_group()
+  feat.add_argument('--use_tflite', action='store_true', help='Using tflite model for evaluation')
+  feat.add_argument('--use_savedmodel', action='store_true', help='Using Tensorflow SavedModel for evaluation')
+  parser.add_argument('model', type=str, help='Model\'s path')
+  args = parser.parse_args()
+  
+  # Path to models
+  tflite_model_file = args.model
 
-# Load model
-interpreter = tf.lite.Interpreter(model_path=str(tflite_model_file))
-interpreter.allocate_tensors()
+  '''
+  Load data for train/test
+  '''
+  # NICS_images, NICS_labels = loadimage('train')
+  test_images, test_labels = loadimage('test')
 
-eval_res = evaluate_model(interpreter)
+  print(len(test_images))
 
-print("Accuracy: ", eval_res*100, "%")
-print(f'Elapsed time: %f', infer_avg_time)
-# print("Accuracy (quantized model): ", evaluate_model(interpreter_quant)*100, "%")
+  # Re-load data from pkl
+  # train_images = _load_pkl('/content/drive/MyDrive/MICA/BACaff_images')
+  # train_labels = _load_pkl('/content/drive/MyDrive/MICA/BACaff_labels')
+
+  # Check number of data
+  # print("Training images: {}".format(train_images.shape))
+  # print("Training labels: {}".format(train_labels.shape))
+  # print("Validation images: {}".format(val_images.shape))
+  # print("Validation labels: {}".format(val_labels.shape))
+  print("Test images: {}".format(test_images.shape))
+  print("Test labels: {}".format(test_labels.shape))
+
+  '''
+  Load model
+  '''
+  interpreter = tf.lite.Interpreter(model_path=str(tflite_model_file))
+  interpreter.allocate_tensors()
+
+  eval_res = evaluate_model(interpreter)
+
+  print("Accuracy: ", eval_res*100, "%")
+  print(f'Elapsed time: %f', infer_avg_time)
+  # print("Accuracy (quantized model): ", evaluate_model(interpreter_quant)*100, "%")
