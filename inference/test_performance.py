@@ -200,20 +200,6 @@ if __name__ == '__main__':
  
     infer = saved_model_loaded.signatures['serving_default']
     # print(infer.structured_outputs)
-    
-    # img_path = f'{folder_path}/test/1 Hầu họng/HH5.jpg'
-    # img = image.load_img(img_path, target_size=(128, 128))
-    # x = image.img_to_array(img)
-    # x = np.expand_dims(x, axis=0)
-    # x = preprocess_input(x)
-    # x = tf.constant(x)
-    # labeling = infer(x)
-    # prediction = next(iter(labeling.values())).numpy()
-    # preds = labeling['prob'].numpy()
-    # print('{} - Predicted: {}'.format(img_path, decode_predictions(preds, top=3)[0]))
-    # print('Inference Results: \n\t{}'.format(labeling))
-    # print(f'Predictions: {np.argmax(prediction)}')
-
     for i in range(nb_classes):
         avg_time = 0
         total_time = 0
